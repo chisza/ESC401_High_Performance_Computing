@@ -1,0 +1,275 @@
+Process rank: 34
+Computed in 0.03796 seconds
+Process rank: 8
+Computed in 0.03834 seconds
+Process rank: 12
+Computed in 0.03771 seconds
+Process rank: 32
+Computed in 0.0409 seconds
+Process rank: 35
+Computed in 0.04167 seconds
+Process rank: 38
+Computed in 0.04179 seconds
+Process rank: 45
+Computed in 0.03807 seconds
+Process rank: 52
+Computed in 0.04217 seconds
+Process rank: 71
+Computed in 0.03773 seconds
+Process rank: 80
+Computed in 0.04158 seconds
+Process rank: 82
+Computed in 0.03855 seconds
+Process rank: 91
+Computed in 0.04172 seconds
+Process rank: 97
+Computed in 0.0389 seconds
+Process rank: 101
+Computed in 0.03814 seconds
+Process rank: 118
+Computed in 0.04373 seconds
+Process rank: 10
+Computed in 0.04104 seconds
+Process rank: 16
+Computed in 0.04045 seconds
+Process rank: 20
+Computed in 0.03812 seconds
+Process rank: 36
+Computed in 0.03913 seconds
+Process rank: 43
+Computed in 0.03825 seconds
+Process rank: 50
+Computed in 0.04242 seconds
+Process rank: 59
+Computed in 0.04422 seconds
+Process rank: 63
+Computed in 0.03912 seconds
+Process rank: 66
+Computed in 0.0401 seconds
+Process rank: 67
+Computed in 0.03825 seconds
+Process rank: 68
+Computed in 0.03929 seconds
+Process rank: 69
+Computed in 0.04215 seconds
+Process rank: 70
+Computed in 0.03972 seconds
+Process rank: 73
+Computed in 0.03809 seconds
+Process rank: 93
+Computed in 0.04398 seconds
+Process rank: 95
+Computed in 0.03986 seconds
+Process rank: 103
+Computed in 0.03808 seconds
+Process rank: 0
+pi is approximately 3.1415926555897862, Error is 0.0000000019999931
+Computed in 0.01299 seconds
+Computed in 0.03831 seconds
+Process rank: 2
+Computed in 0.04144 seconds
+Process rank: 4
+Computed in 0.04283 seconds
+Process rank: 6
+Computed in 0.0413 seconds
+Process rank: 14
+Computed in 0.03924 seconds
+Process rank: 18
+Computed in 0.03953 seconds
+Process rank: 19
+Computed in 0.03835 seconds
+Process rank: 22
+Computed in 0.04148 seconds
+Process rank: 24
+Computed in 0.03989 seconds
+Process rank: 26
+Computed in 0.0422 seconds
+Process rank: 30
+Computed in 0.03975 seconds
+Process rank: 33
+Computed in 0.04096 seconds
+Process rank: 37
+Computed in 0.04231 seconds
+Process rank: 39
+Computed in 0.04363 seconds
+Process rank: 40
+Computed in 0.04029 seconds
+Process rank: 41
+Computed in 0.03861 seconds
+Process rank: 42
+Computed in 0.04309 seconds
+Process rank: 44
+Computed in 0.0427 seconds
+Process rank: 46
+Computed in 0.04401 seconds
+Process rank: 47
+Computed in 0.04273 seconds
+Process rank: 49
+Computed in 0.0384 seconds
+Process rank: 51
+Computed in 0.03831 seconds
+Process rank: 53
+Computed in 0.03899 seconds
+Process rank: 54
+Computed in 0.04037 seconds
+Process rank: 55
+Computed in 0.04259 seconds
+Process rank: 56
+Computed in 0.04104 seconds
+Process rank: 57
+Computed in 0.04433 seconds
+Process rank: 58
+Computed in 0.03872 seconds
+Process rank: 60
+Computed in 0.0416 seconds
+Process rank: 61
+Computed in 0.04047 seconds
+Process rank: 62
+Computed in 0.03933 seconds
+Process rank: 64
+Computed in 0.03961 seconds
+Process rank: 65
+Computed in 0.0409 seconds
+Process rank: 72
+Computed in 0.03876 seconds
+Process rank: 74
+Computed in 0.03916 seconds
+Process rank: 75
+Computed in 0.04016 seconds
+Process rank: 76
+Computed in 0.03831 seconds
+Process rank: 77
+Computed in 0.04224 seconds
+Process rank: 78
+Computed in 0.03842 seconds
+Process rank: 79
+Computed in 0.03835 seconds
+Process rank: 81
+Computed in 0.03871 seconds
+Process rank: 83
+Computed in 0.03832 seconds
+Process rank: 84
+Computed in 0.04147 seconds
+Process rank: 85
+Computed in 0.04021 seconds
+Process rank: 86
+Computed in 0.04237 seconds
+Process rank: 87
+Computed in 0.03832 seconds
+Process rank: 88
+Computed in 0.0423 seconds
+Process rank: 89
+Computed in 0.03965 seconds
+Process rank: 90
+Computed in 0.0444 seconds
+Process rank: 96
+Computed in 0.04032 seconds
+Process rank: 99
+Computed in 0.03926 seconds
+Process rank: 104
+Computed in 0.04297 seconds
+Process rank: 106
+Computed in 0.04413 seconds
+Process rank: 108
+Computed in 0.03922 seconds
+Process rank: 110
+Computed in 0.04066 seconds
+Process rank: 113
+Computed in 0.04396 seconds
+Process rank: 115
+Computed in 0.03844 seconds
+Process rank: 1
+Computed in 0.04449 seconds
+Process rank: 3
+Computed in 0.03957 seconds
+Process rank: 5
+Computed in 0.04457 seconds
+Process rank: 7
+Computed in 0.04447 seconds
+Process rank: 9
+Computed in 0.04126 seconds
+Process rank: 11
+Computed in 0.04037 seconds
+Process rank: 13
+Computed in 0.04138 seconds
+Process rank: 15
+Computed in 0.03929 seconds
+Process rank: 17
+Computed in 0.04063 seconds
+Process rank: 21
+Computed in 0.0416 seconds
+Process rank: 23
+Computed in 0.04146 seconds
+Process rank: 25
+Computed in 0.04004 seconds
+Process rank: 27
+Computed in 0.0429 seconds
+Process rank: 28
+Computed in 0.03934 seconds
+Process rank: 29
+Computed in 0.03959 seconds
+Process rank: 31
+Computed in 0.04255 seconds
+Process rank: 92
+Computed in 0.04453 seconds
+Process rank: 94
+Computed in 0.03964 seconds
+Process rank: 98
+Computed in 0.03925 seconds
+Process rank: 100
+Computed in 0.04054 seconds
+Process rank: 102
+Computed in 0.04109 seconds
+Process rank: 105
+Computed in 0.0442 seconds
+Process rank: 107
+Computed in 0.04071 seconds
+Process rank: 109
+Computed in 0.04148 seconds
+Process rank: 111
+Computed in 0.03944 seconds
+Process rank: 112
+Computed in 0.04289 seconds
+Process rank: 114
+Computed in 0.03954 seconds
+Process rank: 116
+Computed in 0.04429 seconds
+Process rank: 117
+Computed in 0.04157 seconds
+Process rank: 119
+Computed in 0.04155 seconds
+Process rank: 120
+Computed in 0.04277 seconds
+Process rank: 121
+Computed in 0.03844 seconds
+Process rank: 122
+Computed in 0.03943 seconds
+Process rank: 123
+Computed in 0.04043 seconds
+Process rank: 124
+Computed in 0.03936 seconds
+Process rank: 125
+Computed in 0.03853 seconds
+Process rank: 126
+Computed in 0.03932 seconds
+Process rank: 127
+Computed in 0.03868 seconds
+Process rank: 48
+Computed in 0.05143 seconds
+
+
+Batch Job Summary Report (version 21.01.1) for Job "cpi_mpi" (2390274) on eiger
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2023-10-10T20:04:30 2023-10-10T20:04:30 2023-10-10T20:04:30 2023-10-10T20:04:32   00:00:02   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    czanatta         uzh8        debug        1      0.327 kJ
+
