@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <math.h>
 #include "gettime.h"
+#include <omp.h>
 
 typedef struct {
     float x;
@@ -33,7 +34,6 @@ int main(int argc, char *argv[]) {
         sum += sqrt(data[i].r2);
     }
     tElapsed = getTime() - tStart;
-    printf("sum=%f\n", sum);
-    printf("Computed in %.4g seconds\n", tElapsed);
+    printf("sum = %f, time = %.4g, threads = %d\n", sum, tElapsed, omp_get_max_threads());
     return 0;
 }
