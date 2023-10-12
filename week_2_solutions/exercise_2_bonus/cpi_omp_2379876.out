@@ -1,0 +1,35 @@
+Thread rank: 12
+Thread rank: 5
+Thread rank: 4
+Thread rank: 0
+Thread rank: 6
+Thread rank: 11
+Thread rank: 10
+Thread rank: 7
+Thread rank: 9
+Thread rank: 3
+Thread rank: 13
+Thread rank: 15
+Thread rank: 14
+Thread rank: 8
+Thread rank: 1
+Thread rank: 2
+pi is approximately 3.1415926542564581, Error is 0.0000000006666649
+Computed in 0.2818 seconds
+
+
+Batch Job Summary Report (version 21.01.1) for Job "cpi_omp" (2379876) on eiger
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2023-10-03T19:22:31 2023-10-03T19:22:31 2023-10-03T19:22:32 2023-10-03T19:22:33   00:00:01   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    czanatta         uzh8        debug        1      0.230 kJ
+
