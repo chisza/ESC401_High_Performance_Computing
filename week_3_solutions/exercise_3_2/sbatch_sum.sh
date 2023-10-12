@@ -16,9 +16,9 @@
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-srun sum_O0 &
-srun sum_O1 &
-srun sum_O2 &
-srun sum_O3 &
+srun --exact sum_O0 
+srun --exact sum_O1 
+srun --exact sum_O2 
+srun --exact sum_O3 
 
 wait

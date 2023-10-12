@@ -1,25 +1,25 @@
 sum=10022429073.341873
-Computed in 5.984 seconds
+Computed in 5.979 seconds
 sum=10022429073.341873
-Computed in 1.154 seconds
+Computed in 1.158 seconds
+sum=10022429073.341873
+Computed in 1.061 seconds
 sum=10022429073.341873
 Computed in 1.072 seconds
-sum=10022429073.341873
-Computed in 1.062 seconds
 
 
-Batch Job Summary Report (version 21.01.1) for Job "sum_O" (2392093) on eiger
+Batch Job Summary Report (version 21.01.1) for Job "sum_O" (2393453) on eiger
 
 Job information (1/2)
 -----------------------------------------------------------------------------------------------------
              Submit            Eligible               Start                 End    Elapsed Time limit
 ------------------- ------------------- ------------------- ------------------- ---------- ----------
-2023-10-11T18:33:02 2023-10-11T18:33:02 2023-10-11T18:33:02 2023-10-11T18:35:08   00:02:06   00:05:00
+2023-10-12T22:27:26 2023-10-12T22:27:26 2023-10-12T22:27:26 2023-10-12T22:27:37   00:00:11   00:05:00
 -----------------------------------------------------------------------------------------------------
 
 Job information (2/2)
 -------------------------------------------------------------
     Username      Account    Partition   NNodes        Energy
 ------------ ------------ ------------ -------- -------------
-    czanatta         uzh8        debug        1     25.857 kJ
+    czanatta         uzh8        debug        1      2.367 kJ
 
