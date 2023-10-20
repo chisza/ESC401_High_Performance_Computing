@@ -30,7 +30,7 @@ int main (int argc, char *argv[]){
     // Compute differences and norm
     double diff = norm_diff(p, u_new, u_old);
 
-    // Initialize the Jacobi step conter
+    // Initialize the Jacobi step counter
     int nstep=1;
 
     // Main loop for the Jacobi iterations

@@ -1,4 +1,4 @@
-rhs_function=2         # defines which right hand side f(x,y) to use; 1: double sine, 2: step function
+rhs_function=1         # defines which right hand side f(x,y) to use; 1: double sine, 2: step function
 nx=161                 # number of grid points along x-axis
 ny=161                 # number of grid points along y-axis
 foutput=1000           # frequency of the output
