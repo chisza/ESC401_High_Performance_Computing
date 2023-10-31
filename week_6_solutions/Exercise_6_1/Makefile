@@ -2,11 +2,11 @@ CFLAGS=-O3 -fopenmp
 LDFLAGS=-fopenmp
 CC=cc
 
-all : critical_serial
+all : serial
        
-critical_serial : critical_serial.o
+critical_serial : serial.o
 
-critical_serial.o : critical_serial.c
+critical_serial.o : serial.c
 
 clean : 
-	rm -f critical_serial critical_serial.o
+	rm -f serial serial.o
