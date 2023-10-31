@@ -64,9 +64,10 @@ int main(int argc, char *argv[]){
     // second loop
     int num_n0 = 0;
     {
-    #pragma omp parallel for reduction (+:num_n0)
+    #pragma omp parallel for firstprivate(num_n0)
     for (int i= 0; i<num_size;i++) {
 	    if (numbers[i] == 0) {
+		    #pragma omp critical
 		    num_n0++;}
     }
     }

@@ -63,13 +63,7 @@ int main(int argc, char *argv[]){
 
     // second loop
     int num_n0 = 0;
-    {
-    #pragma omp parallel for reduction (+:num_n0)
-    for (int i= 0; i<num_size;i++) {
-	    if (numbers[i] == 0) {
-		    num_n0++;}
-    }
-    }
+    for (int i=0;i<num_size;i++) if (numbers[i] == 0) num_n0++;
     printf("number of 0s in file: %d\n",num_n0);  
     printf("true number of 0s in file: %d\n",true_n0);  
 
