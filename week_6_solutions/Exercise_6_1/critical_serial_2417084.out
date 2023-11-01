@@ -1,0 +1,45 @@
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+Size of integer array/file: 1000000
+max number in file: 38747
+number of 0s in file: 646016
+true number of 0s in file: 646016
+
+
+Batch Job Summary Report (version 21.01.1) for Job "critical_serial" (2417084) on eiger
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2023-11-01T09:16:21 2023-11-01T09:16:21 2023-11-01T09:16:22 2023-11-01T09:16:25   00:00:03   00:15:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    czanatta         uzh8        debug        1      0.614 kJ
+
