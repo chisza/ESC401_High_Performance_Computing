@@ -28,7 +28,6 @@ int main (int argc, char *argv[]){
     output_source(p, f);
 
     // Do a first jacobi step
-#pragma omp parallel  
     jacobi_step(p, u_new, u_old, f);
 
     // Compute differences and norm
@@ -38,8 +37,7 @@ int main (int argc, char *argv[]){
     // Initialize the Jacobi step conter
     int nstep=1;
 
-    // Main loop for the Jacobi iterations 
-#pragma omp parallel reduction(+:nstep)
+    // Main loop for the Jacobi iterations
     while (diff>p.tol && nstep<p.nstep_max){
         jacobi_step(p, u_new, u_old, f);
         diff = norm_diff(p, u_new, u_old);
