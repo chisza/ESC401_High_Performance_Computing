@@ -15,6 +15,8 @@ typedef std::vector<particle> particles;
 
 void forces(particles &plist) {
         int n = plist.size();
+	{
+#pragma omp parallel for
         for(int i=0; i<n; ++i) { // We want to calculate the force on all particles
                 plist[i].ax = plist[i].ay = plist[i].az = 0; // start with zero acceleration
                 for(int j=0; j<n; ++j) { // Depends on all other particles
@@ -29,6 +31,7 @@ void forces(particles &plist) {
                         plist[i].az += dz * ir3;
                 }
         }
+}
 }
 
 // Initial conditions
@@ -46,9 +49,23 @@ void ic(particles &plist, int n) {
 }
 
 int main(int argc, char *argv[]) {
-	int N=20'000; // number of particles
+	int N;
+	if (argc == 0) {
+		N=20'000;
+	} else if (argc == 1) {
+		N=atof(argv[1]);
+	} else {
+		printf("Please enter only one number at the time!");
+	}
+
+	//int N=20'000; // number of particles
 	particles plist; // vector of particles
+	double tStart;
+	tStart = getTime();
 	ic(plist,N); // initialize starting position/velocity 
 	forces(plist); // calculate the forces
+	double tElapsed;
+	tElapsed = getTime() - tStart;
+	printf("Computed in %.4g seconds\n", tElapsed);
 	return 0;
 }
