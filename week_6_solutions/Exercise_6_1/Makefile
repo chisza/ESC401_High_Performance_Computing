@@ -2,11 +2,11 @@ CFLAGS=-O3 -fopenmp
 LDFLAGS=-fopenmp
 CC=cc
 
-all : reduction_serial
+all : second_loop_serial
        
-reduction_serial : reduction_serial.o
+second_loop_serial : second_loop_serial.o
 
-reduction_serial.o : reduction_serial.c
+second_loop_serial.o : second_loop_serial.c
 
 clean : 
-	rm -f reduction_serial reduction_serial.o
+	rm -f second_loop_serial second_loop_serial.o

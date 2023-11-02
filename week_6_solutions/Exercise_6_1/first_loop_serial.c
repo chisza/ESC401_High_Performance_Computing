@@ -57,8 +57,9 @@ int main(int argc, char *argv[]){
 
     // first loop
     int maxval = 0;
-    #pragma omp parallel for
-    for (int i=0;i<num_size;i++) if (numbers[i] > maxval) maxval = numbers[i];
+    int i;
+    #pragma omp parallel for private(i)
+    for (i=0;i<num_size;i++) if (numbers[i] > maxval) maxval = numbers[i];
     printf("max number in file: %d\n",maxval);	
 
     // second loop

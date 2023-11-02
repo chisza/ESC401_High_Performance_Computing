@@ -58,8 +58,13 @@ int main(int argc, char *argv[]){
     // first loop
     int maxval = 0;
     {
-    #pragma omp parallel for default(none) shared(maxval, numbers, num_size)
-    for (int i=0;i<num_size;i++) if (numbers[i] > maxval) maxval = numbers[i];}
+    #pragma omp parallel for
+    for (int i=0;i<num_size;i++) {
+	    if (numbers[i] > maxval)
+	            #pragma omp atomic write
+		    maxval = numbers[i];
+    }
+    }
 
     printf("max number in file: %d\n",maxval);	
 
