@@ -1,0 +1,49 @@
+Reading parameters:
+	 rhs_function=2
+	 nx=512
+	 ny=512
+	 foutput=1000
+	 nstep_max=1000000
+	 tolerance=1e-08
+Computed in 69.29 seconds
+Reading parameters:
+	 rhs_function=2
+	 nx=512
+	 ny=512
+	 foutput=1000
+	 nstep_max=1000000
+	 tolerance=1e-08
+Computed in 79.05 seconds
+Reading parameters:
+	 rhs_function=2
+	 nx=512
+	 ny=512
+	 foutput=1000
+	 nstep_max=1000000
+	 tolerance=1e-08
+Computed in 61.53 seconds
+Reading parameters:
+	 rhs_function=2
+	 nx=512
+	 ny=512
+	 foutput=1000
+	 nstep_max=1000000
+	 tolerance=1e-08
+Computed in 55.29 seconds
+
+
+Batch Job Summary Report (version 21.01.1) for Job "jacobi_step" (2421887) on eiger
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2023-11-02T21:32:42 2023-11-02T21:32:42 2023-11-02T21:32:42 2023-11-02T21:37:09   00:04:27   00:15:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    czanatta         uzh8        debug        1     58.581 kJ
+

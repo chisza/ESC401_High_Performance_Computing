@@ -46,7 +46,7 @@ int main (int argc, char *argv[]){
         jacobi_step(p, u_new, u_old, f);
         diff = norm_diff(p, u_new, u_old);
         nstep++;
-        printf("Step %d, Diff=%g\n", nstep, diff);
+        //printf("Step %d, Diff=%g\n", nstep, diff);
         if (nstep%p.foutput==0)
             output(p, nstep, u_new);
     }
