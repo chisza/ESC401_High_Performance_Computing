@@ -4,6 +4,7 @@
 #ifdef _OPENMP
 #include <omp.h>
 #endif
+#include "gettime.h"
 
 int main (int argc, char *argv[]){
 
@@ -37,6 +38,9 @@ int main (int argc, char *argv[]){
     // Initialize the Jacobi step conter
     int nstep=1;
 
+    double tStart;
+    tStart = getTime();
+
     // Main loop for the Jacobi iterations
     while (diff>p.tol && nstep<p.nstep_max){
         jacobi_step(p, u_new, u_old, f);
@@ -46,5 +50,9 @@ int main (int argc, char *argv[]){
         if (nstep%p.foutput==0)
             output(p, nstep, u_new);
     }
+
+    double tElapsed;
+    tElapsed = getTime() - tStart;
+    printf("Computed in %.4g seconds\n", tElapsed);
     return 0;
 }
