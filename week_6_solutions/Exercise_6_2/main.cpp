@@ -28,11 +28,12 @@ int main (int argc, char *argv[]){
     output_source(p, f);
 
     // Do a first jacobi step
-#pragma omp parallel 
+#pragma omp parallel  
     jacobi_step(p, u_new, u_old, f);
 
     // Compute differences and norm
     double diff = norm_diff(p, u_new, u_old);
+    
 
     // Initialize the Jacobi step conter
     int nstep=1;
