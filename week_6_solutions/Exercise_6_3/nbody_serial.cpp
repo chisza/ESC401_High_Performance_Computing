@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 	int N{};
 	if (!(convert >> N)) //do the conversion
 		N = 0; // if the conversion fails, set N to a default value
-	std::cout << "Got integer: " << N << "\n";
+	//std::cout << "Got integer: " << N << "\n";
 
 	//int N=20'000; // number of particles
 	particles plist; // vector of particles
@@ -71,7 +71,7 @@ int main(int argc, char *argv[]) {
 	forces(plist); // calculate the forces
 	double tElapsed;
 	tElapsed = getTime() - tStart;
-	std::cout << "Computed in " << tElapsed << ", with N = " << N;
+	std::cout << std::fixed << "Computed in " << tElapsed << ", with N = " << N;
 	std::cout << std::endl;
 	return 0;
 }

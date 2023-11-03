@@ -1,31 +1,24 @@
-Got integer: 100
-Computed in 0.0251751, with N = 100
-Got integer: 500
-Computed in 0.0307372, with N = 500
-Got integer: 1000
-Computed in 0.026037, with N = 1000
-Got integer: 5000
-Computed in 0.0375829, with N = 5000
-Got integer: 10000
-Computed in 0.0386291, with N = 10000
-Got integer: 20000
-Computed in 0.071521, with N = 20000
-Got integer: 50000
-Computed in 0.223857, with N = 50000
+Computed in 0.030445, with N = 100
+Computed in 0.024312, with N = 500
+Computed in 0.026553, with N = 1000
+Computed in 0.031594, with N = 5000
+Computed in 0.041321, with N = 10000
+Computed in 0.075844, with N = 20000
+Computed in 0.233423, with N = 50000
 
 
-Batch Job Summary Report (version 21.01.1) for Job "nbody_omp" (2422485) on eiger
+Batch Job Summary Report (version 21.01.1) for Job "nbody_omp" (2422569) on eiger
 
 Job information (1/2)
 -----------------------------------------------------------------------------------------------------
              Submit            Eligible               Start                 End    Elapsed Time limit
 ------------------- ------------------- ------------------- ------------------- ---------- ----------
-2023-11-03T07:56:36 2023-11-03T07:56:36 2023-11-03T07:56:37 2023-11-03T07:56:39   00:00:02   00:15:00
+2023-11-03T11:07:41 2023-11-03T11:07:41 2023-11-03T11:07:41 2023-11-03T11:07:44   00:00:03   00:15:00
 -----------------------------------------------------------------------------------------------------
 
 Job information (2/2)
 -------------------------------------------------------------
     Username      Account    Partition   NNodes        Energy
 ------------ ------------ ------------ -------- -------------
-    czanatta         uzh8        debug        1      0.574 kJ
+    czanatta         uzh8        debug        1      0.606 kJ
 
