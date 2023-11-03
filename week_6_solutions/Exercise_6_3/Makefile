@@ -1,14 +1,13 @@
-CPPFLAGS=-O3 -fopenmp
-LDFLAGS=-fopenmp
+CPPFLAGS=-O3
 CC=CC
 
-all : nbody
+all : nbody_serial
 
-nbody : nbody.o gettime.o
+nbody_serial : nbody_serial.o gettime.o
 
-nbody.o : nbody.cpp gettime.h
+nbody_serial.o : nbody_serial.cpp gettime.h
 
 gettime.o : gettime.c gettime.h
 
 clean :
-		rm -f nbody.o nbody gettime.o
+		rm -f nbody_serial.o nbody_serial gettime.o

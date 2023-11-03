@@ -1,8 +1,9 @@
 #include <vector>
 #include <random>
-#ifdef _OPENMP
-#include <omp.h>
-#endif
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <stdlib.h>
 #include "gettime.h"
 
 struct particle {
@@ -15,8 +16,6 @@ typedef std::vector<particle> particles;
 
 void forces(particles &plist) {
         int n = plist.size();
-	{
-#pragma omp parallel for
         for(int i=0; i<n; ++i) { // We want to calculate the force on all particles
                 plist[i].ax = plist[i].ay = plist[i].az = 0; // start with zero acceleration
                 for(int j=0; j<n; ++j) { // Depends on all other particles
@@ -31,7 +30,6 @@ void forces(particles &plist) {
                         plist[i].az += dz * ir3;
                 }
         }
-}
 }
 
 // Initial conditions
@@ -49,14 +47,21 @@ void ic(particles &plist, int n) {
 }
 
 int main(int argc, char *argv[]) {
-	int N;
-	if (argc == 0) {
-		N=20'000;
-	} else if (argc == 1) {
-		N=atof(argv[1]);
-	} else {
-		printf("Please enter only one number at the time!");
+	//check whether argv[0] is empty or the program's name
+	if (argc <= 1)
+	{
+		if (argv[0])
+			std::cout << "Usage: " << argv[0] << " <number>" << "\n" << "Please enter a number" << "\n";
+		else
+			std::cout << "Usage: <program name> <number>" << "\n";
+		return 1;
 	}
+	//set up a stringstream variable named convert, initialized with the input from argv[1]
+	std::stringstream convert{ argv[1] };
+	int N{};
+	if (!(convert >> N)) //do the conversion
+		N = 0; // if the conversion fails, set N to a default value
+	std::cout << "Got integer: " << N << "\n";
 
 	//int N=20'000; // number of particles
 	particles plist; // vector of particles
@@ -66,6 +71,7 @@ int main(int argc, char *argv[]) {
 	forces(plist); // calculate the forces
 	double tElapsed;
 	tElapsed = getTime() - tStart;
-	printf("Computed in %.4g seconds\n", tElapsed);
+	std::cout << "Computed in " << tElapsed << ", with N = " << N;
+	std::cout << std::endl;
 	return 0;
 }
