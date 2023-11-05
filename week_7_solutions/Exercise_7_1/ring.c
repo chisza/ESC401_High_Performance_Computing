@@ -7,6 +7,7 @@ int main(int argc, char** argv) {
 
     // Get the number of processes and rank of the process
     int size, my_rank, tag = 100;
+    MPI_Status status;
     MPI_Comm_size(MPI_COMM_WORLD, &size); // gets the number of MPI processes in the communicator in which the calling MPI process belongs
     // returns a number for size, basically it the function goes into the communicater and gets the number of processes and assigns it to the
     // variable size -> is the number of processes
@@ -42,8 +43,8 @@ int main(int argc, char** argv) {
     //     update the local sum
     for (int i = 0; i < n_proc-1; i++) {
         MPI_Ssend(&send_rank, 1, MPI_INTEGER, right_rank, 100, MPI_COMM_WORLD);
-        MPI_Recv(&recv_rank, 1, MPI_INTEGER, left_rank, 100, MPI_COMM_WORLD);
-        mysum += recv_rank;
+        MPI_Recv(&recv_rank, 1, MPI_INTEGER, left_rank, 100, MPI_COMM_WORLD, &status);
+        my_sum += recv_rank;
     }
 
     printf("I am processor %d out of %d, and the sum is %d\n", my_rank, size, my_sum);
