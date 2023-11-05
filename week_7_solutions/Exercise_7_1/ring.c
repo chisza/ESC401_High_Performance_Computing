@@ -19,6 +19,7 @@ int main(int argc, char** argv) {
 
     int my_sum = my_rank; // initalize with own rank
 
+    // Initialize the values so they can be used
     int send_rank = my_rank;  // Send buffer
     int recv_rank = 0;        // Receive buffer
 
@@ -28,7 +29,7 @@ int main(int argc, char** argv) {
         left_rank = size - 1;
         right_rank = my_rank + 1;
     }
-    else if (my_rank == size - 1) {
+    else if (my_rank == size - 1) { // count starts from 0, max number is size - 1
         left_rank = my_rank - 1;
         right_rank = 0;
     }
@@ -42,7 +43,9 @@ int main(int argc, char** argv) {
     //     update the send buffer
     //     update the local sum
     for (int i = 0; i < n_proc-1; i++) {
+        // send sends the value associated with send_rank
         MPI_Ssend(&send_rank, 1, MPI_INTEGER, right_rank, 100, MPI_COMM_WORLD);
+        // recv receives the value and associates it with the recv_rank?
         MPI_Recv(&recv_rank, 1, MPI_INTEGER, left_rank, 100, MPI_COMM_WORLD, &status);
         my_sum += recv_rank;
     }

@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --job-name="ring_mpi"
+#SBATCH --job-name="ring_non_block"
 #SBATCH --account="uzh8"
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=chiara.zanatta@uzh.ch
@@ -14,5 +14,5 @@
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-srun ring_mpi
+srun ring_non_block
 
