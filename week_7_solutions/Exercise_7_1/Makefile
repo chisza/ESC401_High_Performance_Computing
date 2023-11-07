@@ -2,10 +2,10 @@ ring_mpi : ring.c
 	cc -O3 -o ring_mpi ring.c
 
 ring_non_block : ring_non_block.c
-	mpicc -O3 -o ring_non_block ring_non_block.c
+	cc -O3 -o ring_non_block ring_non_block.c
 
 ring_non_blocking : ring_non_blocking.c
-	mpicc -O3 -o ring_non_blocking ring_non_blocking.c
+	cc -O3 -o ring_non_blocking ring_non_blocking.c
 
 all : ring_mpi ring_non_block ring_non_blocking
 
