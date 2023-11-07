@@ -6,13 +6,13 @@
 #SBATCH --time=00:05:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-core=1
-#SBATCH --ntasks-per-node=4
+#SBATCH --ntasks-per-node=10
 #SBATCH --cpus-per-task=1
-#SBATCH --partition=debug
+#SBATCH --partition=normal
 #SBATCH --constraint=mc
 #SBATCH --hint=nomultithread
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-srun ring_non_block
+srun ring_non_blocking_1
 
