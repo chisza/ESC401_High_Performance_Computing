@@ -1,3 +1,7 @@
+//
+// Created by chiar on 07.11.2023.
+//
+
 #include "mpi.h"
 #include <stdio.h>
 
@@ -7,7 +11,8 @@ int main(int argc, char** argv) {
 
     // Get the number of processes and rank of the process
     int size, my_rank, tag = 100;
-    MPI_Status status;
+    MPI_Status status[2];
+    MPI_Request request[2];
     MPI_Comm_size(MPI_COMM_WORLD, &size); // gets the number of MPI processes in the communicator in which the calling MPI process belongs
     // returns a number for size, basically it the function goes into the communicater and gets the number of processes and assigns it to the
     // variable size -> is the number of processes
@@ -21,9 +26,10 @@ int main(int argc, char** argv) {
 
     // Initialize the values so they can be used
     int send_rank = my_rank;  // Send buffer
-    int recv_rank = 0;        // Receive buffer
+    int recv_rank = my_rank - 1;        // Receive buffer
 
-    // Compute the ranks of left/right neighbours 
+
+    // Compute the ranks of left/right neighbours
     int left_rank, right_rank;
     if (my_rank == 0) {
         left_rank = size - 1;
@@ -42,12 +48,16 @@ int main(int argc, char** argv) {
     //     send to right, receive from left
     //     update the send buffer
     //     update the local sum
-    for (int i = 0; i < n_proc-1; i++) {
+    for (int i = 0; i < n_proc - 1; i++) {
         // send sends the value associated with send_rank
-        MPI_Ssend(&send_rank, 1, MPI_INTEGER, right_rank, 100, MPI_COMM_WORLD);
+        MPI_Isend(&send_rank, 1, MPI_INTEGER, right_rank, 100, MPI_COMM_WORLD, &request[0]);
         // recv receives the value and associates it with the recv_rank?
-        MPI_Recv(&recv_rank, 1, MPI_INTEGER, left_rank, 100, MPI_COMM_WORLD, &status);
+        MPI_Irecv(&recv_rank, 1, MPI_INTEGER, left_rank, 100, MPI_COMM_WORLD, &request[1]);
+        //my_sum += recv_rank;
+        MPI_Waitall(2, request, status);
         my_sum += recv_rank;
+        send_rank = recv_rank;
+
     }
 
     printf("I am processor %d out of %d, and the sum is %d\n", my_rank, size, my_sum);
