@@ -25,8 +25,10 @@ int main(int argc, char** argv) {
     int my_sum = my_rank; // initalize with own rank
 
     // Initialize the values so they can be used
-    int send_rank = my_rank;  // Send buffer
-    int recv_rank = my_rank - 1;        // Receive buffer
+    int send_rank = my_rank;  // Send buffer -> has to be initialized with the rank to send it -> so it can set to the recv_rank
+    // later on and so can be received
+    int recv_rank;        // Receive buffer, gets overwritten by the receive command -> gets it from somewhere
+    // -> it's Magig
 
 
     // Compute the ranks of left/right neighbours
