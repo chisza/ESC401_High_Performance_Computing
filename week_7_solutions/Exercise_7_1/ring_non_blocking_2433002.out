@@ -1,0 +1,32 @@
+ring_non_blocking_0
+I am processor 1 out of 4, and the sum is 6
+I am processor 3 out of 4, and the sum is 6
+I am processor 2 out of 4, and the sum is 6
+I am processor 0 out of 4, and the sum is 6
+ring_non_blocking_1
+I am processor 0 out of 4, and the sum is 6
+I am processor 1 out of 4, and the sum is 6
+I am processor 3 out of 4, and the sum is 6
+I am processor 2 out of 4, and the sum is 6
+ring_non_blocking_2
+I am processor 1 out of 4, and the sum is 6
+I am processor 2 out of 4, and the sum is 6
+I am processor 3 out of 4, and the sum is 6
+I am processor 0 out of 4, and the sum is 6
+
+
+Batch Job Summary Report (version 21.01.1) for Job "ring_non_blocking" (2433002) on eiger
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2023-11-08T18:41:53 2023-11-08T18:41:53 2023-11-08T18:48:23 2023-11-08T18:48:26   00:00:03   00:15:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    czanatta         uzh8       normal        1      0.631 kJ
+

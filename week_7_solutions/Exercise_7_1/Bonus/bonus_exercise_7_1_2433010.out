@@ -1,0 +1,21 @@
+I am processor 1 out of 4, and the sum is 6
+I am processor 2 out of 4, and the sum is 6
+I am processor 3 out of 4, and the sum is 6
+I am processor 0 out of 4, and the sum is 6
+
+
+Batch Job Summary Report (version 21.01.1) for Job "bonus_exercise_7_1" (2433010) on eiger
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2023-11-08T18:47:36 2023-11-08T18:47:36 2023-11-08T18:50:53 2023-11-08T18:50:55   00:00:02   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    czanatta         uzh8       normal        1      0.314 kJ
+

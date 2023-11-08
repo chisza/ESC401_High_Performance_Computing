@@ -1,7 +1,7 @@
 When using ```MPI_Ssend``` and ```MPI_Recv``` are used, the executable does not print anything but gets termianted
 due to time limit. This is because it produces a dead lock, where the send and receive command are waiting for each other, 
 but as it does around in a circle, neither can proceed. The output produced by running the
-blocking version ([ring.c](ring.c)) is in [slurm-2423886.out](slurm-2423886.out).
+blocking version ([ring.c](ring.c)) is in [ring_2432991.out](ring_2432991.out).
 
 The version for ```MPI_Ssend``` and ```MPI_Recv``` where a deadlock is avoided is in [ring_non_blocking_0.c](ring_non_blocking_0.c)
 It avoids the problem of a deadlock, because no rank is waiting for a signal that never comes because all the other ranks 
@@ -15,6 +15,8 @@ me to understand some aspects of the procedure; it is a deadlock._
 The corrected file for the non blocking implementation the file is first the file [ring_non_blocking_1.c](ring_non_blocking_1.c) 
 for the ```MPI_Isend```-```MPI_Irecv```-```MPI_Waitall``` version, 
 for ```MPI_Irecv```-```MPI_Isend```-```MPI_Waitall``` it is file [ring_non_blocking_2.c](ring_non_blocking_2.c).
+
+All the output of the non deadlock implementations are in [ring_non_blocking_2433002.out](ring_non_blocking_2433002.out)
 
 These methods are better, because they do not need to wait or block till the communication happened,
 it can communicate in the background. The ```MPI_Waitall``` at the end of each for loop makes sure, that the processes are done
