@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
 
     // Initialize the values so they can be used
     int send_rank = my_rank;  // Send buffer
-    int recv_rank = my_rank - 1;     // Receive buffer
+    int recv_rank = 0;     // Receive buffer
 
     // Compute the ranks of left/right neighbours 
     int left_rank, right_rank;
