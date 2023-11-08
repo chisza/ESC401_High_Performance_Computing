@@ -21,9 +21,11 @@ int main(int argc, char** argv) {
     int my_sum = my_rank; // initalize with own rank
 
     int send_rank = my_rank;  // Send buffer
-    int recv_rank;    // Receive buffer
+    int recv_rank;    // Receive buffer, will be overwritten anyways, can start out with any value or like here
+    // with just an initialization
     
     // initialize the receive rank, from which rank should data be received
+    // this is not needed -> recv_rank gets overwritten and does not need a special initialization
     if (my_rank == 0) {
 	    recv_rank = size;
     }

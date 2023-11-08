@@ -5,25 +5,9 @@ int main(int argc, char** argv) {
     // Initialize the MPI environment
     MPI_Init(NULL, NULL);
 
-    // The cartesian coordinate topology
-    /*  int MPI_Cart_create(
-            MPI_Comm comm_old, // the old communicater, in this case MPI_COMM_WORLD
-            int ndims, // an integer representing the number of dimensions of the grid, in the ring case
-            // 1 for 1D, can also be 2D, etc.
-            int *dims, // integer array of size ndims, specifies the number of process in each dimension
-            // e.g. dims = [ndims], for ring it would contain the integer value 4
-            // for 4 processes in the one dimension (between the processors and around to start at first again)
-            int *periods,  // a logical array of size ndims specifying whether the grid is period (true -> goes around)
-            // or not (false -> does not go around) in each dimension -> for each dimension, contains 1 or 0 to denote this
-            // e.g. periods = [ndims]
-            int reorder,  // is either 1 or 0 -> ranks get reordered (1 -> true) or not (0 -> false) (logical)
-
-            MPI_Comm *comm_cart // the new cartesian communicator
-            );*/
-
     // Initialize the dimensions of the grid
     int ndims = 1;
-    // Initialize the processes per dimension
+    // Initialize the processes per dimension -> array with size ndims
     int dims[1];
     // Set the number of processes per dimension,
     // if more than one dimension, define the number of processes for every
@@ -32,7 +16,7 @@ int main(int argc, char** argv) {
     dims[0] = 4;
     // Initialize the periodicity
     int period[1];
-    // Set the periodicity to true
+    // Set the periodicity to true for each dimension
     period[0] = 1;
     // Initialize the reordering
     int reorder;
@@ -59,37 +43,9 @@ int main(int argc, char** argv) {
     int send_rank = my_rank;  // Send buffer
     int recv_rank = my_rank - 1;        // Receive buffer
 
-
-/*   It works with this, now try with MPI_Cart_shift
- *  // Compute the ranks of left/right neighbours
-    int left_rank, right_rank;
-    if (my_rank == 0) {
-        left_rank = size - 1;
-        right_rank = my_rank + 1;
-    }
-    else if (my_rank == size - 1) { // count starts from 0, max number is size - 1
-        left_rank = my_rank - 1;
-        right_rank = 0;
-    }
-    else {
-        left_rank = my_rank - 1;
-        right_rank = my_rank + 1;
-    }*/
-
-/*    int MPI_Cart_shift(
-            MPI_Comm comm, // the communicator with cartesian structure
-            // in this case -> new_comm -> is the communicator that was returned
-            // from MPI_Cart_create
-            int direction, // coordinate dimension of shift (integer) -> just one value
-            // dimension along we want to communicate -> from 0 to ndims-1??
-            int displ, // displacement > 0 -> upward shift -> towards the bigger/ higher rank
-            // displacement < 0 -> downward shift -> towards the smaller / lower rank
-            int *source, // rank of the source process (integer) -> from here we get it
-            int *dest // rank of the destination process (integer) -> here we want to send to
-            );*/
-
-    int direction = 0;
-    int displ = 1;
+    int direction = 0; // go row-wise and stay in the row
+    int displ = 1; // affect the immediately left and right rank
+    // initalize the left and right rank -> source and dest
     int left_rank, right_rank;
     MPI_Cart_shift(new_comm, direction, displ, &left_rank, &right_rank);
 

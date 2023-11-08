@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     MPI_Request request[2];
     MPI_Comm_size(MPI_COMM_WORLD, &size); // gets the number of MPI processes in the communicator in which the calling MPI process belongs
     // returns a number for size, basically it the function goes into the communicater and gets the number of processes and assigns it to the
-    // variable size -> is the number of processes
+    // variable size -> is the number of processes -> basically is the number of ranks that take part in the operation
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank); // function goes into the communicator and gets the rank of the process as a number
     // and assigns it to the variable my_rank -> it goes into the communicator and says, LOL this is my rank
 
@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     int send_rank = my_rank;  // Send buffer -> has to be initialized with the rank to send it -> so it can set to the recv_rank
     // later on and so can be received
     int recv_rank;        // Receive buffer, gets overwritten by the receive command -> gets it from somewhere
-    // -> it's Magig
+    // -> it's Magic
 
 
     // Compute the ranks of left/right neighbours

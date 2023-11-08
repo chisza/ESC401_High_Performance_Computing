@@ -1,7 +1,3 @@
-//
-// Created by chiar on 07.11.2023.
-//
-
 #include "mpi.h"
 #include <stdio.h>
 
@@ -10,14 +6,8 @@ int main(int argc, char** argv) {
     MPI_Init(NULL, NULL);
 
     // Get the number of processes and rank of the process
-    int size, my_rank, tag = 100;
-    MPI_Status status[2];
-    // starts a request for the send and receive respectively,
-    // is needed to keep track of the status of the communication
-    // is needed in MPI_Waitall, so that it knows when to continue / when the communication is done
-    // MPI_Waitall is needed with 2 requests, because we have both a send and a receive command
-    // that both need to be tracked till they're finished
-    MPI_Request request[2];
+    int size, my_rank, tag = 100, tag_2 = 200;
+    MPI_Status status;
     MPI_Comm_size(MPI_COMM_WORLD, &size); // gets the number of MPI processes in the communicator in which the calling MPI process belongs
     // returns a number for size, basically it the function goes into the communicater and gets the number of processes and assigns it to the
     // variable size -> is the number of processes
@@ -31,10 +21,9 @@ int main(int argc, char** argv) {
 
     // Initialize the values so they can be used
     int send_rank = my_rank;  // Send buffer
-    int recv_rank = 0;        // Receive buffer, will be overwritten anyway, can start out with any value
+    int recv_rank = 0;     // Receive buffer
 
-
-    // Compute the ranks of left/right neighbours
+    // Compute the ranks of left/right neighbours 
     int left_rank, right_rank;
     if (my_rank == 0) {
         left_rank = size - 1;
@@ -53,16 +42,24 @@ int main(int argc, char** argv) {
     //     send to right, receive from left
     //     update the send buffer
     //     update the local sum
-    for (int i = 0; i < n_proc - 1; i++) {
-        // send sends the value associated with send_rank
-        MPI_Isend(&send_rank, 1, MPI_INTEGER, right_rank, 100, MPI_COMM_WORLD, &request[0]);
-        // recv receives the value and associates it with the recv_rank?
-        MPI_Irecv(&recv_rank, 1, MPI_INTEGER, left_rank, 100, MPI_COMM_WORLD, &request[1]);
-        //my_sum += recv_rank;
-        MPI_Waitall(2, request, status);
-        my_sum += recv_rank;
-        send_rank = recv_rank;
-
+    for (int i = 0; i < n_proc-1; i++) {
+        // to avoid a deadlock, split the ranks into two groups, that send and receive alternatively
+        if (my_rank % 2 == 0) {
+            // Even-ranked processes send first
+            MPI_Ssend(&send_rank, 1, MPI_INT, right_rank, tag, MPI_COMM_WORLD);
+            MPI_Recv(&recv_rank, 1, MPI_INT, left_rank, tag, MPI_COMM_WORLD, &status);
+            // Update the send_rank and the my_sum as we just used it.
+            // Has to updated also for the odd-ranked processes every time to get the correct result
+            // otherwise the values are not correct
+            send_rank = recv_rank;
+            my_sum += recv_rank;
+        } else {
+            // Odd-ranked processes receive first
+            MPI_Recv(&recv_rank, 1, MPI_INT, left_rank, tag, MPI_COMM_WORLD, &status);
+            MPI_Ssend(&send_rank, 1, MPI_INT, right_rank, tag, MPI_COMM_WORLD);
+            send_rank = recv_rank;
+            my_sum += recv_rank;
+        }
     }
 
     printf("I am processor %d out of %d, and the sum is %d\n", my_rank, size, my_sum);
