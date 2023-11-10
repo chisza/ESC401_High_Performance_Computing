@@ -55,9 +55,9 @@ int main(int argc, char** argv) {
     //     update the local sum
     for (int i = 0; i < n_proc - 1; i++) {
         // recv receives the value and associates it with the recv_rank?
-        MPI_Irecv(&recv_rank, 1, MPI_INTEGER, left_rank, 100, MPI_COMM_WORLD, &request[1]);
+        MPI_Irecv(&recv_rank, 1, MPI_INTEGER, left_rank, 100, new_comm, &request[1]);
         // send sends the value associated with send_rank
-        MPI_Isend(&send_rank, 1, MPI_INTEGER, right_rank, 100, MPI_COMM_WORLD, &request[0]);
+        MPI_Isend(&send_rank, 1, MPI_INTEGER, right_rank, 100, new_comm, &request[0]);
         //my_sum += recv_rank;
         MPI_Waitall(2, request, status);
         my_sum += recv_rank;
