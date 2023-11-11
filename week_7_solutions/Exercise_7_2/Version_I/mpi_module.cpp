@@ -88,33 +88,44 @@ int halo_comm(params p, int my_rank, int size, double** u, double* fromLeft, dou
     // initialize what should be sent
     // define the columns
     double* column_to_right = new double [p.ymax - p.ymin];
-    for (int j=0;j<(p.ymax - p.ymin);j++) column_to_right[j] = u[p.xmax - p.xmin - 1][j];
+    for (int j=0;j<(p.ymax - p.ymin);j++) {column_to_right[j] = u[p.xmax - p.xmin - 1][j];}
     double* column_to_left = new double [p.ymax - p.ymin];
-    for (int j=0;j<(p.ymax - p.ymin);j++) column_to_left[j] = u[0][j];
-    printf("&column_to_left : %g", *column_to_left);
+    for (int j=0;j<(p.ymax - p.ymin);j++) {column_to_left[j] = u[0][j];}
+    printf("&column_to_left : %g\n", *column_to_left);
+    printf("column_to_left : %f\n", column_to_left[1]);
 
     MPI_Request request[4];
-    for (int i=0;i<4;i++) {request[i] = MPI_REQUEST_NULL;}
+    //int count = 0;
+    for (int i = 0; i < 4; i++) {
+        request[i] = MPI_REQUEST_NULL;
+    }
+
     if (left_rank != -1) {
-        // send to the left and right
+        // exchange with left
         // column_to_left -> is the address of the first element -> go left of all the elements that we want
         // and send them -> is not a value
-        MPI_Isend(column_to_left, p.ymax - p.ymin, MPI_DOUBLE, left_rank, 0, MPI_COMM_WORLD, &request[0]);
-        printf("I am rank %d and I am sending to rank: %d \n", my_rank, left_rank);
-        MPI_Irecv(fromLeft, p.ymax - p.ymin, MPI_DOUBLE, left_rank, 0, MPI_COMM_WORLD, &request[2]);
+        MPI_Irecv(fromLeft, p.ymax - p.ymin, MPI_DOUBLE, left_rank, 0, MPI_COMM_WORLD, &request[1]);
+        //count += 1;
         printf("I am rank %d and I am receiving from rank: %d \n", my_rank, left_rank);
+        MPI_Isend(column_to_left, p.ymax - p.ymin, MPI_DOUBLE, left_rank, 0, MPI_COMM_WORLD, &request[0]);
+        //count += 1;
+        printf("I am rank %d and I am sending to rank: %d \n", my_rank, left_rank);
+
     }
     if (right_rank != -1){
-        MPI_Isend(column_to_right, p.ymax - p.ymin, MPI_DOUBLE,  right_rank, 1, MPI_COMM_WORLD, &request[1]);
+        // exchange with right
+        MPI_Irecv(fromRight, p.ymax - p.ymin, MPI_DOUBLE, right_rank, 0, MPI_COMM_WORLD, &request[3]);
+        //count += 1;
+        printf("I am rank %d and I am receiving from rank: %d \n", my_rank, right_rank);
+        MPI_Isend(column_to_right, p.ymax - p.ymin, MPI_DOUBLE,  right_rank, 0, MPI_COMM_WORLD, &request[2]);
+        //count += 1;
         printf("I am rank %d and I am sending to rank: %d\n", my_rank, right_rank);
         // what is stored in u (is the subslice that this rank can see)
 
-        MPI_Irecv(fromRight, p.ymax - p.ymin, MPI_DOUBLE, right_rank, 1, MPI_COMM_WORLD, &request[3]);
-        printf("I am rank %d and I am receiving from rank: %d \n", my_rank, right_rank);
     }
 
+    //MPI_Waitall(4, request, MPI_STATUSES_IGNORE);
     MPI_Waitall(4, request, MPI_STATUSES_IGNORE);
-
 
 	printf("mpi_module.cpp, define halo comm:  \n");
 	return 0;

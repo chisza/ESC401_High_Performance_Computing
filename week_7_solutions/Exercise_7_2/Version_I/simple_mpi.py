@@ -6,7 +6,7 @@ from matplotlib.colors import  LogNorm
 from scipy.io import FortranFile
 import sys
 
-# path the the file
+# path to the file
 path_to_output = "output/"
 path_to_source  = "output/"
 
@@ -28,6 +28,7 @@ for i in np.arange(n):
     source_arr.append(source)
     data_arr.append(data)
 
+print(source_arr[1])
 source_arr = np.array(source_arr)
 data_arr = np.array(data_arr)
 

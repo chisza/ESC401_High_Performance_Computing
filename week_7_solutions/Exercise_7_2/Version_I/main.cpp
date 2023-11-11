@@ -22,28 +22,30 @@ int main(int argc, char *argv[]){
     mpi_get_domain(p.nx, p.ny, my_rank, size, &p.xmin, &p.xmax, &p.ymin, &p.ymax);
 
 
-    // // Initialize the matrices used in the Jacobi iteration
+    // Initialize the matrices used in the Jacobi iteration
     double **f, **u_old, **u_new;
 
-    // // First allocate memory for each matrix
+    // First allocate memory for each matrix
     f = allocateGrid(p.xmax - p.xmin, p.ymax - p.ymin, f);
+    //printf("matrix f: %f", f);
     u_old = allocateGrid(p.xmax - p.xmin, p.ymax - p.ymin, u_old);
     u_new = allocateGrid(p.xmax - p.xmin, p.ymax - p.ymin, u_new);
     // Initialize the value of matrices
     init_variables(p, f, u_old, u_new);
 
-    // // Output the source term of the Poisson equation in a csv file
+    // Output the source term of the Poisson equation in a csv file
     output_source(p, f, my_rank);
 
-    // // Do a first jacobi step
+    // Do a first jacobi step
     jacobi_step(p, u_new, u_old, f, my_rank, size);
+    printf("jacobi_step done\n");
 
-    // // Compute differences and norm
+    // Compute differences and norm
     double diff = norm_diff(p, u_new, u_old);
 
     printf("I am total square differences: %g\n",diff);
 
-    // // Initialize the Jacobi step conter
+    // Initialize the Jacobi step conter
     int nstep=1;
 
     // // Main loop for the Jacobi iterations
@@ -56,7 +58,7 @@ int main(int argc, char *argv[]){
         printf("Step %d, Diff=%g\n", nstep, diff);
         if (nstep%p.foutput==0) output(p, nstep, u_new, my_rank);
     }
-    // //final output
+    //final output
     output(p, nstep, u_new, my_rank);
 
     close_MPI();
