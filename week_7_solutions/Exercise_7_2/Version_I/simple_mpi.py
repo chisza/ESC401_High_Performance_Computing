@@ -22,13 +22,14 @@ for i in np.arange(n):
     path_to_output = "output/output_"+str(i)+"_"+str(outn).zfill(7)+".csv"
     path_to_source = "output/output_source_"+str(i) + ".csv"
 
-    source = np.genfromtxt(path_to_source, delimiter=',')
-    data = np.genfromtxt(path_to_output, delimiter=',')
+    source = np.genfromtxt(path_to_source, skip_header = 0, delimiter=',')
+    data = np.genfromtxt(path_to_output, skip_header = 0, delimiter=',')
+    print(source)
 
     source_arr.append(source)
     data_arr.append(data)
-
-print(source_arr[1])
+print("\n")
+print(source_arr[0])
 source_arr = np.array(source_arr)
 data_arr = np.array(data_arr)
 
