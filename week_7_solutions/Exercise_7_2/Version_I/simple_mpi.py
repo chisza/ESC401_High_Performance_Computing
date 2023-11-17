@@ -24,12 +24,12 @@ for i in np.arange(n):
 
     source = np.genfromtxt(path_to_source, skip_header = 0, delimiter=',')
     data = np.genfromtxt(path_to_output, skip_header = 0, delimiter=',')
-    print(source)
+    #print(source)
 
     source_arr.append(source)
     data_arr.append(data)
-print("\n")
-print(source_arr[0])
+#print("\n")
+#print(source_arr[0])
 source_arr = np.array(source_arr)
 data_arr = np.array(data_arr)
 

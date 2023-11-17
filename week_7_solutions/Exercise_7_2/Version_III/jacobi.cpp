@@ -38,7 +38,7 @@ void jacobi_step(params p, double** u_new, double** u_old, double** f, int my_ra
     double dx = 1.0/((double)p.nx - 1);
     double dy = 1.0/((double)p.ny - 1);
 
-    double* fromLeft = new double[p.ymax - p.ymin]; 
+    double* fromLeft = new double[p.ymax - p.ymin];
     double* fromRight = new double[p.ymax - p.ymin];
 
     for (int i=p.xmin; i<p.xmax; i++){
@@ -47,7 +47,7 @@ void jacobi_step(params p, double** u_new, double** u_old, double** f, int my_ra
         }
     }
 
-    halo_comm(p, my_rank, size, u_new, fromLeft, fromRight); 
+    halo_comm(p, my_rank, size, u_new, fromLeft, fromRight);
 
     printf("Function jacobi_step in jacobi.cpp : adapt the update of u_new.\n");
     for (int i=p.xmin; i<p.xmax; i++){
