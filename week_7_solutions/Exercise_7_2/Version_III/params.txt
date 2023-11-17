@@ -1,6 +1,6 @@
 rhs_function=1
-nx=161
-ny=161
+nx=160
+ny=160
 foutput=1000
 nstep_max=100000
 tolerance=1.0E-08
