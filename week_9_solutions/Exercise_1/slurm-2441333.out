@@ -1,0 +1,144 @@
+CrayPat/X:  Version 22.05.0 Revision e78a24aa4  04/12/22 22:48:36
+
+#################################################################
+#                                                               #
+#            CrayPat-lite Performance Statistics                #
+#                                                               #
+#################################################################
+
+CrayPat/X:  Version 22.05.0 Revision e78a24aa4  04/12/22 22:48:36
+Experiment:                  lite  lite-samples
+Number of PEs (MPI ranks):      1
+Numbers of PEs per Node:        1
+Numbers of Threads per PE:      1
+Number of Cores per Socket:    64
+Execution start time:  Fri Nov 17 19:40:52 2023
+System name and speed:  nid002236  1.894 GHz (nominal)
+AMD   Rome                 CPU  Family: 23  Model: 49  Stepping:  0
+Core Performance Boost:  1 PE has CPB capability
+
+
+
+Avg Process Time: 2.82 secs         
+High Memory:      20.2 MiBytes 20.2 MiBytes per PE
+
+Notes for table 1:
+
+  This table shows functions that have significant exclusive sample
+    hits, averaged across ranks.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O samp_profile ...
+
+Table 1:  Profile by Function
+
+  Samp% |  Samp | Imb. |  Imb. | Group
+        |       | Samp | Samp% |  Function=[MAX10]
+       
+ 100.0% | 279.0 |   -- |    -- | Total
+|-------------------------------------------------
+| 100.0% | 279.0 |   -- |    -- | USER
+||------------------------------------------------
+|| 100.0% | 279.0 |   -- |    -- | forces
+|=================================================
+
+Notes for table 2:
+
+  This table shows functions, and line numbers within functions, that
+    have significant exclusive sample hits, averaged across ranks.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O samp_profile+src ...
+
+Table 2:  Profile by Group, Function, and Line
+
+  Samp% |  Samp | Imb. |  Imb. | Group
+        |       | Samp | Samp% |  Function=[MAX10]
+        |       |      |       |   Source
+        |       |      |       |    Line
+       
+ 100.0% | 279.0 |   -- |    -- | Total
+|-----------------------------------------------------------------------------
+| 100.0% | 279.0 |   -- |    -- | USER
+||----------------------------------------------------------------------------
+|| 100.0% | 279.0 |   -- |    -- | forces
+3|        |       |      |       |  week_9_solutions/Exercise_1/time_complexity/nbody.cpp
+||||--------------------------------------------------------------------------
+4|||   4.3% |  12.0 |   -- |    -- | line.18
+4|||   3.6% |  10.0 |   -- |    -- | line.21
+4|||   6.5% |  18.0 |   -- |    -- | line.22
+4|||  63.4% | 177.0 |   -- |    -- | line.23
+4|||  11.8% |  33.0 |   -- |    -- | line.24
+4|||  10.4% |  29.0 |   -- |    -- | line.25
+|=============================================================================
+
+Observation:  MPI utilization
+
+    No suggestions were made because each node has only one rank.
+
+
+Notes for table 3:
+
+  This table shows memory traffic for numa nodes, taking for each numa
+    node the maximum value across nodes. It also shows the balance in
+    memory traffic by showing the top 3 and bottom 3 node values.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O mem_bw ...
+
+Table 3:  Memory Bandwidth by Numanode
+
+   Memory |     Read |    Write |   Thread |  Memory |  Memory | Numanode
+  Traffic |   Memory |   Memory |     Time | Traffic | Traffic | 
+   GBytes |  Traffic |  Traffic |          |  GBytes |       / | 
+          |   GBytes |   GBytes |          |   / Sec | Nominal | 
+          |          |          |          |         |    Peak | 
+|--------------------------------------------------------------------------
+|     0.00 |     0.00 |     0.00 | 2.808936 |    0.00 |    0.0% | numanode.1
+|==========================================================================
+
+Notes for table 4:
+
+  This table shows energy and power usage for the nodes with the
+    maximum, mean, and minimum usage, as well as the sum of usage over
+    all nodes.
+    Energy and power for accelerators is also shown, if applicable.
+  For further explanation, see the "General table notes" below,
+    or use:  pat_report -v -O program_energy ...
+
+Table 4:  Program energy and power usage (from Cray PM)
+
+   Node |     Node |  Process | Total
+ Energy |    Power |     Time | 
+    (J) |      (W) |          | 
+-------------------------------------
+    591 |  209.270 | 2.824108 | Total
+=====================================
+Program invocation:  nbody
+
+For a complete report with expanded tables and notes, run:
+  pat_report /capstor/scratch/cscs/czanatta/nbody+25928-8639969s
+
+For help identifying callers of particular functions:
+  pat_report -O callers+src /capstor/scratch/cscs/czanatta/nbody+25928-8639969s
+To see the entire call tree:
+  pat_report -O calltree+src /capstor/scratch/cscs/czanatta/nbody+25928-8639969s
+
+For interactive, graphical performance analysis, run:
+  app2 /capstor/scratch/cscs/czanatta/nbody+25928-8639969s
+
+================  End of CrayPat-lite output  ==========================
+
+
+Batch Job Summary Report (version 21.01.1) for Job "nbody" (2441333) on eiger
+
+Job information (1/2)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2023-11-17T19:40:50 2023-11-17T19:40:50 2023-11-17T19:40:51 2023-11-17T19:40:55   00:00:04   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/2)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    czanatta         uzh8        debug        1      0.812 kJ
+
