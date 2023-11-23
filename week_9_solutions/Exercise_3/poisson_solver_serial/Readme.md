@@ -7,7 +7,7 @@ path till the current location,  `/output` is the output folder the stuff go to,
 where the desired output comes from from within the container, here from `/poisson/output`)
 * for pushing:  
 rename with `docker tag poisson:latest chiza99/poisson:latest`  
-push with `docker push chiza99/poisson:latest
+push with `docker push chiza99/poisson:latest`
 * on VM: everything with Docker requires `sudo`  
 pull the image with `sudo docker pull chiza99/poisson:latest`  
 run with `sudo docker run -v "$(pwd)"/output:/poisson/output`, make a directory `output` beforehand
