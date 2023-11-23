@@ -29,6 +29,6 @@ and the numbers are the IP address of the instance)
 14. run `make all`
 15. run `mpirun -4 main` for the executable
 16. close the connection to the VM in the terminal
-17. on the ScienceCloud website, in the tab Instances, use create snapshot to save a snapshot of the instace
+17. on the ScienceCloud website, in the tab Instances, use create snapshot to save a snapshot of the instace, named `chiara_exercise_9_2`
 18. Delete the VM
 19. The snap shot can be used to create a VM again to continue working
