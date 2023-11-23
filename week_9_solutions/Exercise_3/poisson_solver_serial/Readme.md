@@ -16,3 +16,5 @@ run with `sudo docker run -v "$(pwd)"/output:/poisson/output`, make a directory 
 The snap shot of the VM is chiara_exercise_9.
 
 The poisson image is [here](https://hub.docker.com/r/chiza99/poisson/tags)
+
+I only added the [test.png](output/test.png), because it crashed when I tried to commit all the changes.
