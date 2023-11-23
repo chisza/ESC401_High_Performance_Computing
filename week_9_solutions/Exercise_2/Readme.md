@@ -1,5 +1,5 @@
 Step-by-step guide on how to set up a VM on ScienceCloud and how to run the Poisson 
-solver on it (a PDF with the screen shots of the process is in [Exercise_9_2](Exercise_9_2)
+solver on it (a PDF with the screen shots of the process is in [Exercise_9_2](Exercise_9_2.pdf)
 
 1. On ScienceCloud, under the tab Access & Security in the register Key Pair, add 
 the _public key_ of the computer you work on
