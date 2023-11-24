@@ -7,7 +7,7 @@ path till the current location,  `/output` is the output folder the stuff go to,
 where the desired output comes from from within the container, here from `/poisson/output`)
 * for pushing:  
 rename with `docker tag poisson:latest chiza99/poisson:latest`  
-push with `docker push chiza99/poisson:latest
+push with `docker push chiza99/poisson:latest`
 * on VM: everything with Docker requires `sudo`  
 pull the image with `sudo docker pull chiza99/poisson:latest`  
 run with `sudo docker run -v "$(pwd)"/output:/poisson/output`, make a directory `output` beforehand
@@ -16,3 +16,5 @@ run with `sudo docker run -v "$(pwd)"/output:/poisson/output`, make a directory 
 The snap shot of the VM is chiara_exercise_9.
 
 The poisson image is [here](https://hub.docker.com/r/chiza99/poisson/tags)
+
+I only added the [test.png](output/test.png), because it crashed when I tried to commit all the changes.
