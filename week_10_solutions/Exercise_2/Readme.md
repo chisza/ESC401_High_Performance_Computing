@@ -34,3 +34,4 @@ Notes:
 * run `./pymapred.sh` to perform the Map & Reduction procedure
 * [map_and_reduce_operations.txt](map_and_reduce_operation.txt) contains the output, that is printed to the terminal
 * [part-00000](part-00000) contains the counted words
+* the snap shot of the VM is `chiara_hadoop`
