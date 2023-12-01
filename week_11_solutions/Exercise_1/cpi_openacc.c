@@ -8,7 +8,7 @@ int main (int argc, const char *argv[]) {
     double pi;
     double step = 1.0/(double) steps;
     #pragma acc parallel
-    #pragma acc loop reduction (+:sum) private(x)
+    #pragma acc loop reduction(+:sum) private(x)
     for (int j=0;j<5;j++){
         double sum = 0.0;
         double start = getTime();
