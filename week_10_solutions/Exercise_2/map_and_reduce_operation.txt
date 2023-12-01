@@ -1,0 +1,81 @@
+packageJobJar: [/tmp/hadoop-unjar8563200471837633047/] [] /tmp/streamjob1782375086292025470.jar tmpDir=null
+2023-11-24 13:28:44,495 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+2023-11-24 13:28:44,624 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+2023-11-24 13:28:44,812 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/ubuntu/.staging/job_1700828274951_0002
+2023-11-24 13:28:45,428 INFO mapred.FileInputFormat: Total input files to process : 7
+2023-11-24 13:28:45,489 INFO mapreduce.JobSubmitter: number of splits:7
+2023-11-24 13:28:45,980 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1700828274951_0002
+2023-11-24 13:28:45,981 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2023-11-24 13:28:46,092 INFO conf.Configuration: resource-types.xml not found
+2023-11-24 13:28:46,093 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2023-11-24 13:28:46,133 INFO impl.YarnClientImpl: Submitted application application_1700828274951_0002
+2023-11-24 13:28:46,158 INFO mapreduce.Job: The url to track the job: http://localhost:8088/proxy/application_1700828274951_0002/
+2023-11-24 13:28:46,159 INFO mapreduce.Job: Running job: job_1700828274951_0002
+2023-11-24 13:28:51,214 INFO mapreduce.Job: Job job_1700828274951_0002 running in uber mode : false
+2023-11-24 13:28:51,215 INFO mapreduce.Job:  map 0% reduce 0%
+2023-11-24 13:28:56,302 INFO mapreduce.Job:  map 86% reduce 0%
+2023-11-24 13:28:58,311 INFO mapreduce.Job:  map 100% reduce 0%
+2023-11-24 13:29:01,324 INFO mapreduce.Job:  map 100% reduce 100%
+2023-11-24 13:29:01,329 INFO mapreduce.Job: Job job_1700828274951_0002 completed successfully
+2023-11-24 13:29:01,388 INFO mapreduce.Job: Counters: 54
+        File System Counters
+                FILE: Number of bytes read=5550040
+                FILE: Number of bytes written=13008781
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=12914644
+                HDFS: Number of bytes written=642476
+                HDFS: Number of read operations=26
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters
+                Launched map tasks=7
+                Launched reduce tasks=1
+                Data-local map tasks=7
+                Total time spent by all maps in occupied slots (ms)=20320
+                Total time spent by all reduces in occupied slots (ms)=2262
+                Total time spent by all map tasks (ms)=20320
+                Total time spent by all reduce tasks (ms)=2262
+                Total vcore-milliseconds taken by all map tasks=20320
+                Total vcore-milliseconds taken by all reduce tasks=2262
+                Total megabyte-milliseconds taken by all map tasks=20807680
+                Total megabyte-milliseconds taken by all reduce tasks=2316288
+        Map-Reduce Framework
+                Map input records=35371
+                Map output records=538568
+                Map output bytes=4472896
+                Map output materialized bytes=5550076
+                Input split bytes=819
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=47090
+                Reduce shuffle bytes=5550076
+                Reduce input records=538568
+                Reduce output records=47090
+                Spilled Records=1077136
+                Shuffled Maps =7
+                Failed Shuffles=0
+                Merged Map outputs=7
+                GC time elapsed (ms)=764
+                CPU time spent (ms)=8210
+                Physical memory (bytes) snapshot=2646564864
+                Virtual memory (bytes) snapshot=20618956800
+                Total committed heap usage (bytes)=3419930624
+                Peak Map Physical memory (bytes)=369569792
+                Peak Map Virtual memory (bytes)=2581405696
+                Peak Reduce Physical memory (bytes)=277938176
+                Peak Reduce Virtual memory (bytes)=2582622208
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=12913825
+        File Output Format Counters
+                Bytes Written=642476
+2023-11-24 13:29:01,388 INFO streaming.StreamJob: Output directory: output_new
