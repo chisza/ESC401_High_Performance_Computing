@@ -1,5 +1,6 @@
 #include <stdio.h> 
 #include "gettime.h"
+#include "openacc.h"
 
 static long steps = 1000000000;
 
