@@ -1,0 +1,103 @@
+PI = 3.141592653589794 computed in 0.1579 seconds, on NUM_BLOCK: 60, NUM_THREAD: 16
+PI = 3.141592653589793 computed in 0.07254 seconds, on NUM_BLOCK: 60, NUM_THREAD: 32
+PI = 3.141592653589794 computed in 0.04888 seconds, on NUM_BLOCK: 60, NUM_THREAD: 48
+PI = 3.141592653589792 computed in 0.0367 seconds, on NUM_BLOCK: 60, NUM_THREAD: 64
+PI = 3.141592653589793 computed in 0.02991 seconds, on NUM_BLOCK: 60, NUM_THREAD: 80
+PI = 3.141592653589796 computed in 0.02494 seconds, on NUM_BLOCK: 60, NUM_THREAD: 96
+PI = 3.141592653589795 computed in 0.022 seconds, on NUM_BLOCK: 60, NUM_THREAD: 112
+PI = 3.1415926535898 computed in 0.01924 seconds, on NUM_BLOCK: 60, NUM_THREAD: 128
+PI = 3.141592653589793 computed in 0.01777 seconds, on NUM_BLOCK: 60, NUM_THREAD: 144
+PI = 3.141592653589789 computed in 0.016 seconds, on NUM_BLOCK: 60, NUM_THREAD: 160
+PI = 3.141592653589793 computed in 0.07327 seconds, on NUM_BLOCK: 120, NUM_THREAD: 16
+PI = 3.141592653589792 computed in 0.03667 seconds, on NUM_BLOCK: 120, NUM_THREAD: 32
+PI = 3.141592653589796 computed in 0.02492 seconds, on NUM_BLOCK: 120, NUM_THREAD: 48
+PI = 3.1415926535898 computed in 0.01871 seconds, on NUM_BLOCK: 120, NUM_THREAD: 64
+PI = 3.141592653589789 computed in 0.01598 seconds, on NUM_BLOCK: 120, NUM_THREAD: 80
+PI = 3.141592653589788 computed in 0.01334 seconds, on NUM_BLOCK: 120, NUM_THREAD: 96
+PI = 3.141592653589794 computed in 0.01192 seconds, on NUM_BLOCK: 120, NUM_THREAD: 112
+PI = 3.141592653589795 computed in 0.01046 seconds, on NUM_BLOCK: 120, NUM_THREAD: 128
+PI = 3.141592653589794 computed in 0.01316 seconds, on NUM_BLOCK: 120, NUM_THREAD: 144
+PI = 3.141592653589796 computed in 0.01186 seconds, on NUM_BLOCK: 120, NUM_THREAD: 160
+PI = 3.141592653589794 computed in 0.04887 seconds, on NUM_BLOCK: 180, NUM_THREAD: 16
+PI = 3.141592653589796 computed in 0.02446 seconds, on NUM_BLOCK: 180, NUM_THREAD: 32
+PI = 3.141592653589793 computed in 0.01705 seconds, on NUM_BLOCK: 180, NUM_THREAD: 48
+PI = 3.141592653589788 computed in 0.01281 seconds, on NUM_BLOCK: 180, NUM_THREAD: 64
+PI = 3.141592653589795 computed in 0.01111 seconds, on NUM_BLOCK: 180, NUM_THREAD: 80
+PI = 3.141592653589794 computed in 0.009284 seconds, on NUM_BLOCK: 180, NUM_THREAD: 96
+PI = 3.141592653589796 computed in 0.01132 seconds, on NUM_BLOCK: 180, NUM_THREAD: 112
+PI = 3.141592653589796 computed in 0.009928 seconds, on NUM_BLOCK: 180, NUM_THREAD: 128
+PI = 3.141592653589803 computed in 0.0113 seconds, on NUM_BLOCK: 180, NUM_THREAD: 144
+PI = 3.141592653589794 computed in 0.0102 seconds, on NUM_BLOCK: 180, NUM_THREAD: 160
+PI = 3.141592653589792 computed in 0.03724 seconds, on NUM_BLOCK: 240, NUM_THREAD: 16
+PI = 3.1415926535898 computed in 0.01867 seconds, on NUM_BLOCK: 240, NUM_THREAD: 32
+PI = 3.141592653589788 computed in 0.01326 seconds, on NUM_BLOCK: 240, NUM_THREAD: 48
+PI = 3.141592653589795 computed in 0.009978 seconds, on NUM_BLOCK: 240, NUM_THREAD: 64
+PI = 3.141592653589796 computed in 0.01183 seconds, on NUM_BLOCK: 240, NUM_THREAD: 80
+PI = 3.141592653589796 computed in 0.009897 seconds, on NUM_BLOCK: 240, NUM_THREAD: 96
+PI = 3.141592653589791 computed in 0.01082 seconds, on NUM_BLOCK: 240, NUM_THREAD: 112
+PI = 3.141592653589798 computed in 0.00951 seconds, on NUM_BLOCK: 240, NUM_THREAD: 128
+PI = 3.141592653589796 computed in 0.01098 seconds, on NUM_BLOCK: 240, NUM_THREAD: 144
+PI = 3.141592653589797 computed in 0.009908 seconds, on NUM_BLOCK: 240, NUM_THREAD: 160
+PI = 3.141592653589793 computed in 0.02994 seconds, on NUM_BLOCK: 300, NUM_THREAD: 16
+PI = 3.141592653589789 computed in 0.01501 seconds, on NUM_BLOCK: 300, NUM_THREAD: 32
+PI = 3.141592653589795 computed in 0.01105 seconds, on NUM_BLOCK: 300, NUM_THREAD: 48
+PI = 3.141592653589796 computed in 0.008332 seconds, on NUM_BLOCK: 300, NUM_THREAD: 64
+PI = 3.141592653589791 computed in 0.01079 seconds, on NUM_BLOCK: 300, NUM_THREAD: 80
+PI = 3.141592653589794 computed in 0.009028 seconds, on NUM_BLOCK: 300, NUM_THREAD: 96
+PI = 3.141592653589792 computed in 0.01041 seconds, on NUM_BLOCK: 300, NUM_THREAD: 112
+PI = 3.141592653589797 computed in 0.009144 seconds, on NUM_BLOCK: 300, NUM_THREAD: 128
+PI = 3.141592653589798 computed in 0.01018 seconds, on NUM_BLOCK: 300, NUM_THREAD: 144
+PI = 3.141592653589788 computed in 0.009199 seconds, on NUM_BLOCK: 300, NUM_THREAD: 160
+PI = 3.141592653589796 computed in 0.02549 seconds, on NUM_BLOCK: 360, NUM_THREAD: 16
+PI = 3.141592653589788 computed in 0.01279 seconds, on NUM_BLOCK: 360, NUM_THREAD: 32
+PI = 3.141592653589794 computed in 0.01159 seconds, on NUM_BLOCK: 360, NUM_THREAD: 48
+PI = 3.141592653589796 computed in 0.008741 seconds, on NUM_BLOCK: 360, NUM_THREAD: 64
+PI = 3.141592653589794 computed in 0.01102 seconds, on NUM_BLOCK: 360, NUM_THREAD: 80
+PI = 3.141592653589796 computed in 0.009238 seconds, on NUM_BLOCK: 360, NUM_THREAD: 96
+PI = 3.141592653589794 computed in 0.01015 seconds, on NUM_BLOCK: 360, NUM_THREAD: 112
+PI = 3.141592653589793 computed in 0.00893 seconds, on NUM_BLOCK: 360, NUM_THREAD: 128
+PI = 3.141592653589798 computed in 0.01017 seconds, on NUM_BLOCK: 360, NUM_THREAD: 144
+PI = 3.141592653589796 computed in 0.009211 seconds, on NUM_BLOCK: 360, NUM_THREAD: 160
+PI = 3.141592653589795 computed in 0.02194 seconds, on NUM_BLOCK: 420, NUM_THREAD: 16
+PI = 3.141592653589794 computed in 0.01103 seconds, on NUM_BLOCK: 420, NUM_THREAD: 32
+PI = 3.141592653589796 computed in 0.01132 seconds, on NUM_BLOCK: 420, NUM_THREAD: 48
+PI = 3.141592653589791 computed in 0.008546 seconds, on NUM_BLOCK: 420, NUM_THREAD: 64
+PI = 3.141592653589792 computed in 0.01038 seconds, on NUM_BLOCK: 420, NUM_THREAD: 80
+PI = 3.141592653589794 computed in 0.008694 seconds, on NUM_BLOCK: 420, NUM_THREAD: 96
+PI = 3.141592653589751 computed in 0.00997 seconds, on NUM_BLOCK: 420, NUM_THREAD: 112
+PI = 3.14159265358979 computed in 0.008763 seconds, on NUM_BLOCK: 420, NUM_THREAD: 128
+PI = 3.141592653589798 computed in 0.009746 seconds, on NUM_BLOCK: 420, NUM_THREAD: 144
+PI = 3.141592653589807 computed in 0.00885 seconds, on NUM_BLOCK: 420, NUM_THREAD: 160
+PI = 3.141592653589789 computed in 0.01659 seconds, on NUM_BLOCK: 600, NUM_THREAD: 16
+PI = 3.141592653589796 computed in 0.008376 seconds, on NUM_BLOCK: 600, NUM_THREAD: 32
+PI = 3.141592653589794 computed in 0.01103 seconds, on NUM_BLOCK: 600, NUM_THREAD: 48
+PI = 3.141592653589797 computed in 0.008352 seconds, on NUM_BLOCK: 600, NUM_THREAD: 64
+PI = 3.141592653589788 computed in 0.01034 seconds, on NUM_BLOCK: 600, NUM_THREAD: 80
+PI = 3.141592653589796 computed in 0.008699 seconds, on NUM_BLOCK: 600, NUM_THREAD: 96
+PI = 3.141592653589807 computed in 0.009641 seconds, on NUM_BLOCK: 600, NUM_THREAD: 112
+PI = 3.141592653589801 computed in 0.008547 seconds, on NUM_BLOCK: 600, NUM_THREAD: 128
+PI = 3.1415926535898 computed in 0.009649 seconds, on NUM_BLOCK: 600, NUM_THREAD: 144
+PI = 3.141592653589786 computed in 0.008763 seconds, on NUM_BLOCK: 600, NUM_THREAD: 160
+
+
+Batch Job Summary Report (version 21.01.1) for Job "cpi_cuda" (50368862) on daint
+
+Job information (1/3)
+-----------------------------------------------------------------------------------------------------
+             Submit            Eligible               Start                 End    Elapsed Time limit
+------------------- ------------------- ------------------- ------------------- ---------- ----------
+2023-12-07T20:33:06 2023-12-07T20:33:06 2023-12-07T20:33:14 2023-12-07T20:33:24   00:00:10   00:05:00
+-----------------------------------------------------------------------------------------------------
+
+Job information (2/3)
+-------------------------------------------------------------
+    Username      Account    Partition   NNodes        Energy
+------------ ------------ ------------ -------- -------------
+    czanatta         uzg2       normal        1      0.431 kJ
+
+Job information (3/3) - GPU utilization data
+----------------------------------------------------
+   Node name       Usage      Max mem Execution time
+------------ ----------- ------------ --------------
+    nid01941        47 %      255 MiB       00:00:01
+
