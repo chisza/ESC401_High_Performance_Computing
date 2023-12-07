@@ -23,8 +23,8 @@ int main(void) {
     int num_blocks[8] = {60, 120, 180, 240, 300, 360, 420, 600};
     int num_threads[10] = {16, 32, 48, 64, 80, 96, 112, 128, 144, 160};
 
-    for (int i; i < 8; i++) {
-        for (int j; j < 10; j++) {
+    for (int i=0; i < 8; i++) {
+        for (int j=0; j < 10; j++) {
             int NUM_BLOCK = num_blocks[i];
             int NUM_THREAD = num_threads[j]
         }
