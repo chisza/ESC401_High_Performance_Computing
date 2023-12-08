@@ -128,9 +128,13 @@ int main(int argc, char** argv) {
     blur_twice_host(x0_orig, x1_orig, n, nsteps);
     auto time_host = get_time() - tstart_host;
 
-    auto tstart = get_time();
+    auto tstart_naive = get_time();
     blur_twice_gpu_naive(x0, x1, n, nsteps);
-    auto time = get_time() - tstart;
+    auto time_naive = get_time() - tstart_naive;
+
+    auto tstart_nocopies = get_time();
+    blur_twice_gpu_nocopies(x0, x1, n, nsteps);
+    auto time_nocopies = get_time() - tstart_nocopies;
 
     auto validate = true;
     for (auto i = 0; i < n; ++i) {
@@ -145,7 +149,9 @@ int main(int argc, char** argv) {
     std::cout << "==== " << (validate ? "success" : "failure") << " ====\n";
     std::cout << "Host version took " << time_host << " s"
               << " (" << time_host/nsteps << " s/step)\n";
-    std::cout << "GPU version took "  << time << " s"
-              << " (" << time/nsteps << " s/step)\n";
+    std::cout << "GPU version naive took "  << time_naive << " s"
+              << " (" << time_naive/nsteps << " s/step)\n";
+    std::cout << "GPU version nocopies took "  << time_nocopies << " s"
+              << " (" << time_nocopies/nsteps << " s/step)\n";
     return 0;
 }
