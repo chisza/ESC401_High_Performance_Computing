@@ -73,7 +73,7 @@ void blur_twice_gpu_nocopies(double *in , double *out , int n, int nsteps)
     double *buffer = malloc_host<double>(n);
 
     // TODO: move the data needed by the algorithm to the GPU
-#pragma acc data pcopyin(buffer[0:n]) pcopyin(in[0:n]) pcopy(out[0:n])
+#pragma acc data pcreate(buffer[0:n]) pcopyin(in[0:n]) pcopy(out[0:n])
     {
         for (auto istep = 0; istep < nsteps; ++istep) {
             // TODO: offload this loop to the GPU
