@@ -14,4 +14,4 @@
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-srun blur.openacc 10 100
+srun blur.openacc 1000 10
