@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --job-name="blur"
+#SBATCH --job-name="dot"
 #SBATCH --account="uzg2"
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=chiara.zanatta@uzh.ch
