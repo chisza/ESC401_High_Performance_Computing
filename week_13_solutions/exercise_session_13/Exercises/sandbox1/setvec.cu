@@ -30,7 +30,7 @@ int main () {
   cudaDeviceSynchronize ();
 
   //TODO : copy data to host
-  cudaMemcpy(ptr, gpu_ptr, cudaMemcpyDeviceToHost);
+  cudaMemcpy(ptr, gpu_ptr, sizeof(float)*N, cudaMemcpyDeviceToHost);
 
   cudaFree (gpu_ptr);
 
