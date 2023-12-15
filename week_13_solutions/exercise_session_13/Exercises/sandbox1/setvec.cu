@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define BLOCKSIZE 256
+#define BLOCKSIZE 257
 
 __global__ void kern_set_val (float *gpu_ptr, float value, int n) {
   int i = threadIdx.x + blockIdx.x * blockDim.x;
