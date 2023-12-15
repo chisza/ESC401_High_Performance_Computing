@@ -25,7 +25,7 @@ int main () {
 
   //TODO : write kernel invocation here
   //call kernel, takes the value to be initialized
-    kern_set_val<<<N/BLOCKSIZE, BLOCKSIZE>>>(gpu_ptr, value, N);
+    kern_set_val<<<(N+BLOCKSIZE-1)/BLOCKSIZE, BLOCKSIZE>>>(gpu_ptr, value, N);
 
   cudaDeviceSynchronize ();
 
