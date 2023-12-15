@@ -68,7 +68,7 @@ int main () {
 
   
   /* TODO : complete the number of blocks below */
-  int numBlocks = NX * NY;
+  int numBlocks = (NX * NY + BLOCKSIZE - 1)/BLOCKSIZE;
  
   /* TODO : kernel invocation */
   kernadd<<<numBlocks, BLOCKSIZE>>>(mat_out_gpu, mat_in1_gpu, mat_in2_gpu, NX, NY);

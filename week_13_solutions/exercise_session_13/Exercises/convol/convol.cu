@@ -4,7 +4,7 @@
 #define STOP 0
 #define START 1
 
-#define BLOCKSIZE 256
+#define BLOCKSIZE 256 // number of threads per block
 
 
 extern "C" void chrono (int kind, float *time);
@@ -51,7 +51,7 @@ extern "C" void gpu_convol (float *a, float *b, int n) {
   // memory transfer.
   chrono (START, &time);
   // TODO : the number of blocks is missing below in the kernel invocation
-  int numBlocks = n*n;
+  int numBlocks = (n*n + BLOCKSIZE -1) / BLOCKSIZE;
   kconvol <<<numBlocks,BLOCKSIZE>>> (gpu_a, gpu_b, n);
   err=cudaDeviceSynchronize ();
   chrono (STOP, &time);
